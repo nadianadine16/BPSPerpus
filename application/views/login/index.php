@@ -20,7 +20,7 @@
           </div>
           <div class="login-wrapper my-auto">
             <h1 class="login-title" style="width:500px">Log in Admin / Supervisor Perpustakaan</h1>
-            <form action="<?=base_url('login/prosesLogin')?>" method="POST">
+            <form action="<?=base_url('User/proses_login')?>" method="POST">
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="username" name="uname1" id="username" class="form-control" placeholder="Masukan Username Anda">

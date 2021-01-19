@@ -1,11 +1,11 @@
 <div id="wrapper">
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>admin/index">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>User/dashboard_admin">
         <div class="sidebar-brand-text mx-3">Admin Perpustakaan</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item ">
-        <a class="nav-link" href="<?= base_url();?>admin/index">
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url();?>User/dashboard_admin">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -13,15 +13,15 @@
       <div class="sidebar-heading">
         Kelola Data
       </div>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-book"></i>
           <span>Data Buku</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url();?>admin/data_kategori_buku">Kategori Buku</a>
-            <a class="collapse-item" href="<?= base_url();?>admin/data_buku">Daftar Buku</a>
+            <a class="collapse-item" href="<?= base_url();?>Kategori_buku/index">Kategori Buku</a>
+            <a class="collapse-item" href="<?= base_url();?>Buku/index">Daftar Buku</a>
           </div>
           </div>
       </li>
@@ -29,33 +29,33 @@
       <div class="sidebar-heading">
         Kelola Data
       </div>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-users"></i>
           <span>Data Pengunjung</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url();?>admin/data_pengunjung_datang">Pengunjung Datang</a>
-            <a class="collapse-item" href="<?= base_url();?>admin/data_pengunjung_pulang">Pengunjung Pulang</a>
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/index">Pengunjung Datang</a>
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/data_pengunjung_pulang">Pengunjung Pulang</a>
           </div>
         </div>
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>admin/data_supervisor">
+        <a class="nav-link" href="<?= base_url();?>User/data_supervisor">
         <i class="fas fa-user-tie"></i>
           <span>Data Supervisor</span></a>
       </li>
       <hr class="sidebar-divider">
-      <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url();?>admin/data_admin">
+      <li class="nav-item ">
+        <a class="nav-link" href="<?= base_url();?>User/data_admin">
         <i class="fas fa-user-tie"></i>
           <span>Data Admin</span></a>
       </li>
       <hr class="sidebar-divider d-none d-md-block">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>admin/data_kritik_saran">
+        <a class="nav-link" href="<?= base_url();?>Kritik_saran/index">
         <i class="fas fa-envelope-open-text"></i>
           <span>Kritik dan Saran</span></a>
       </li>
@@ -84,7 +84,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?= base_url();?>Admin/logout">
+                <a class="dropdown-item" href="<?= base_url();?>User/logout">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -107,7 +107,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?=base_url('admin/edit_data_buku/'.$buku['id_buku'])?>" method="post" enctype="multipart/form-data">
+            <form action="<?=base_url('Buku/edit_data_buku/'.$buku['id_buku'])?>" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id_buku" value="<?=$buku['id_buku'];?>">
                 <div class="form-group">
                     <label for="judul_buku">Judul Buku</label>

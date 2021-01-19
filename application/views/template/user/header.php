@@ -48,11 +48,11 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="<?= base_url();?>user/bukuTamu">Isi Buku Tamu</a></li>
-          <li><a href="<?= base_url();?>user/buku">Buku</a></li>
-          <li><a href="<?= base_url();?>user/contactus">Contact Us</a></li>
-          <li class="get-started"><a href="<?= base_url();?>login/index">LOGIN</a></li>
+          <li class="active"><a href="User/index">Home</a></li>
+          <li><a href="<?= base_url();?>User/bukuTamu">Isi Buku Tamu</a></li>
+          <li><a href="<?= base_url();?>User/buku">Buku</a></li>
+          <li><a href="<?= base_url();?>User/kontakus">Contact Us</a></li>
+          <li class="get-started"><a href="<?= base_url();?>User/login_user">LOGIN</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

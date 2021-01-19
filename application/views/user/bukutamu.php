@@ -26,7 +26,7 @@
 	<div class="bg-contact3" style="background-image: url('<?= base_url()?>/assetsBukuTamu/images/bg-01.jpg');">
 		<div class="container-contact3">
 			<div class="wrap-contact3"style="background:#213B52; width:1000px">
-			<form action="<?=base_url('user/tambahPengunjung')?>" method="POST" >
+			<form action="<?=base_url('User/tambah_pengunjung')?>" method="POST" >
 				<span class="contact3-form-title">
 					Buku Tamu
 				</span>
@@ -80,20 +80,13 @@
 				</div>
 				<div class="drop-down">
 					<div>
-					<select id="id_judulbuku" name="id_judulbuku" style="width:540px;">
+					<select id="id_buku" name="id_buku" style="width:540px;">
 					<?php foreach($judulBuku as $d) : ?>
 						<option value="<?=$d["id_buku"];?>"><?=$d["judul_buku"];?></option>
 					<?php endforeach;?>
 					</select><br><br></div>
 					<span class="focus-input3"></span>
 				</div>
-                <!-- <div class="drop-down">
-					<div>
-					<select class="selection-2" id="id_buku" name="id_buku">    
-                    </select>
-					</div>
-					<span class="focus-input3"></span>
-				</div> -->
 				<input class="input3" type="hidden" name="status" value="1">
 				<div class="container-contact3-form-btn">
 					<button class="contact3-form-btn" name="submit">
@@ -133,7 +126,7 @@
 </script>
 <script type="text/javascript">
  $(document).ready(function() {
-     $('#id_judulbuku').select2();
+     $('#id_buku').select2();
  });
 </script>
 </body>

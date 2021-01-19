@@ -1,11 +1,11 @@
 <div id="wrapper">
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>admin/index">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>User/dashboard_admin">
         <div class="sidebar-brand-text mx-3">Admin Perpustakaan</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item ">
-        <a class="nav-link" href="<?= base_url();?>admin/index">
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url();?>User/dashboard_admin">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -20,8 +20,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url();?>admin/data_kategori_buku">Kategori Buku</a>
-            <a class="collapse-item" href="<?= base_url();?>admin/data_buku">Daftar Buku</a>
+            <a class="collapse-item" href="<?= base_url();?>Kategori_buku/index">Kategori Buku</a>
+            <a class="collapse-item" href="<?= base_url();?>Buku/index">Daftar Buku</a>
           </div>
           </div>
       </li>
@@ -36,35 +36,36 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url();?>admin/data_pengunjung_datang">Pengunjung Datang</a>
-            <a class="collapse-item" href="<?= base_url();?>admin/data_pengunjung_pulang">Pengunjung Pulang</a>
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/index">Pengunjung Datang</a>
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/data_pengunjung_pulang">Pengunjung Pulang</a>
           </div>
         </div>
       </li>
       <hr class="sidebar-divider">
-      <li class="nav-item ">
-        <a class="nav-link" href="<?= base_url();?>admin/data_supervisor">
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url();?>User/data_supervisor">
         <i class="fas fa-user-tie"></i>
           <span>Data Supervisor</span></a>
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item ">
-        <a class="nav-link" href="<?= base_url();?>admin/data_admin">
+        <a class="nav-link" href="<?= base_url();?>User/data_admin">
         <i class="fas fa-user-tie"></i>
           <span>Data Admin</span></a>
       </li>
       <hr class="sidebar-divider d-none d-md-block">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>admin/data_kritik_saran">
+        <a class="nav-link" href="<?= base_url();?>Kritik_saran/index">
         <i class="fas fa-envelope-open-text"></i>
           <span>Kritik dan Saran</span></a>
       </li>
       <hr class="sidebar-divider d-none d-md-block">
     </ul>
-    <!-- End of Sidebar -->
+        </nav>
+        <!-- End of Topbar -->
+  <!-- End of Page Wrapper -->
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+  <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -84,7 +85,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?= base_url();?>Admin/logout">
+                <a class="dropdown-item" href="<?= base_url();?>User/logout">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -92,8 +93,6 @@
             </li>
           </ul>
         </nav>
-        <!-- End of Topbar -->
-  <!-- End of Page Wrapper -->
 
   <div class="container-fluid">
     <div class="card shadow mb-4">
@@ -102,7 +101,7 @@
     </div>
   
   <div class="card-body">
-  <a href="<?= base_url()?>Admin/form_export" class="btn btn-success btn-icon-split">
+  <a href="<?= base_url()?>Pengunjung/form_export" class="btn btn-success btn-icon-split">
       <span class="icon text-white-50">
         <i class="fas fa-download"></i>
       </span>
@@ -139,7 +138,7 @@
             <td><?=$p["jam_keluar"];?></td>
             <td><?=$p["judul_buku"];?></td>
             <td>
-            <a href="<?=base_url();?>admin/hapus_data_pengunjung/<?=$p['id_pengunjung'];?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+            <a href="<?=base_url();?>Pengunjung/hapus_data_pengunjung_pulang/<?=$p['id_pengunjung'];?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
           </tr>
           <?php endforeach;?>          
         </tbody>
