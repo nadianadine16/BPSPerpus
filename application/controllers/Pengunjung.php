@@ -196,6 +196,39 @@ class Pengunjung extends CI_Controller {
         }
     }
 
+    public function s_data_pengunjung_datang() {
+        $data['title'] = 'Data Pengunjung Datang | Perpustakaan BPS Kota Malang';
+        $data['pengunjung'] = $this->Pengunjung_model->getAllPengunjung();
+
+        $this->load->view('template/admin/header',$data);
+        $this->load->view('supervisor/s_data_pengunjung_datang',$data);
+        $this->load->view('template/admin/footer',$data);
+    }
+
+    public function s_pengunjung_keluar($id) {
+        $this->Pengunjung_model->pengunjung_keluar($id);
+        redirect('Pengunjung/s_data_pengunjung_datang', 'refresh');
+    }
+
+    public function s_hapus_data_pengunjung_datang($id) {
+        $this->Pengunjung_model->hapus_data_pengunjung($id);
+        redirect('Pengunjung/s_data_pengunjung_datang','refresh');
+    }
+
+    public function s_data_pengunjung_pulang() {
+        $data['title'] = 'Data Pengunjung Pulang | Perpustakaan BPS Kota Malang';
+        $data['pengunjung'] = $this->Pengunjung_model->getAllPengunjungPulang();
+
+        $this->load->view('template/admin/header',$data);
+        $this->load->view('supervisor/s_data_pengunjung_pulang',$data);
+        $this->load->view('template/admin/footer',$data);
+    }
+
+    public function s_hapus_data_pengunjung_pulang($id) {
+        $this->Pengunjung_model->hapus_data_pengunjung($id);
+        redirect('Pengunjung/s_data_pengunjung_datang','refresh');
+    }
+
 }
 
 /* End of file Pengunjung.php */

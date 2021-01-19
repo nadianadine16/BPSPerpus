@@ -91,6 +91,11 @@ class Buku_model extends CI_Model {
         $this->db->where('buku.id_buku', $id);
         return $this->db->get()->result_array();
     }
+
+    public function getAllKategoriBuku() {
+        $query = $this->db->get('kategori_buku');
+        return $query->result_array();
+    }
 }
 
 /* End of file Buku.php */

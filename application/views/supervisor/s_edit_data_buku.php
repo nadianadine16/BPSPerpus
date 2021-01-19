@@ -1,11 +1,11 @@
 <div id="wrapper">
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>User/dashboard_admin">
-        <div class="sidebar-brand-text mx-3">Admin Perpustakaan</div>
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url();?>User/dashboard_supervisor">
+        <div class="sidebar-brand-text mx-3">Supervisor Perpustakaan</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>User/dashboard_admin">
+      <li class="nav-item ">
+        <a class="nav-link" href="<?= base_url();?>User/dashboard_supervisor">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -13,43 +13,24 @@
       <div class="sidebar-heading">
         Kelola Data
       </div>
-      <li class="nav-item active">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fas fa-book"></i>
-          <span>Data Buku</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="<?= base_url();?>Kategori_buku/index">Kategori Buku</a>
-            <a class="collapse-item" href="<?= base_url();?>Buku/index">Daftar Buku</a>
-          </div>
-          </div>
-      </li>
-      <hr class="sidebar-divider">
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>Pengunjung/data_pengunjung_pulang">
-        <i class="fas fa-user-tie"></i>
-          <span>Data Pengunjung</span></a>
-      </li>
-      <hr class="sidebar-divider">
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>User/data_supervisor">
-        <i class="fas fa-user-tie"></i>
-          <span>Data Supervisor</span></a>
-      </li>
-      <hr class="sidebar-divider">
       <li class="nav-item ">
-        <a class="nav-link" href="<?= base_url();?>User/data_admin">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-users"></i>
+          <span>Data Pengunjung</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/s_data_pengunjung_datang">Pengunjung Datang</a>
+            <a class="collapse-item" href="<?= base_url();?>Pengunjung/s_data_pengunjung_pulang">Pengunjung Pulang</a>
+          </div>
+        </div>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item active">
+        <a class="nav-link" href="<?= base_url();?>Buku/s_data_buku">
         <i class="fas fa-user-tie"></i>
-          <span>Data Admin</span></a>
+          <span>Data Buku</span></a>
       </li>
-      <hr class="sidebar-divider d-none d-md-block">
-      <li class="nav-item">
-        <a class="nav-link" href="<?= base_url();?>Kritik_saran/index">
-        <i class="fas fa-envelope-open-text"></i>
-          <span>Kritik dan Saran</span></a>
-      </li>
-      <hr class="sidebar-divider d-none d-md-block">
     </ul>
     <!-- End of Sidebar -->
 
@@ -88,7 +69,7 @@
   <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Tambah Data Buku Perpustakaan BPS Kota Malang</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Edit Data Buku Perpustakaan BPS Kota Malang</h6>
         </div>
         <div class="card-body">
             <?php if (validation_errors()): ?>
@@ -97,14 +78,15 @@
                 </div>
             <?php endif; ?>
 
-            <form action="<?=base_url('Buku/tambah_data_buku')?>" method="post" enctype="multipart/form-data">
+            <form action="<?=base_url('Buku/s_edit_data_buku/'.$buku['id_buku'])?>" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id_buku" value="<?=$buku['id_buku'];?>">
                 <div class="form-group">
                     <label for="judul_buku">Judul Buku</label>
-                        <input type="text" class="form-control" id="judul_buku" name="judul_buku">
+                        <input type="text" class="form-control" id="judul_buku" name="judul_buku" value="<?=$buku['judul_buku'];?>">
                 </div>
                 <div class="form-group">
                     <label for="nomor_katalog">Nomor Katalog</label>
-                        <input type="text" class="form-control" id="nomor_katalog" name="nomor_katalog">
+                        <input type="text" class="form-control" id="nomor_katalog" name="nomor_katalog" value="<?=$buku['nomor_katalog'];?>">
                 </div>
                 <div class="form-group">
                     <label for="id_kategori">Kategori Buku</label>
@@ -116,28 +98,23 @@
                 </div>
                 <div class="form-group">
                     <label for="isbn">ISBN</label>
-                        <input type="text" class="form-control" id="isbn" name="isbn">
+                        <input type="text" class="form-control" id="isbn" name="isbn" value="<?=$buku['isbn'];?>">
                 </div>
                 <div class="form-group">
                     <label for="tahun_rilis">Tahun Rilis</label>
-                        <input type="date" class="form-control" id="tahun_rilis" name="tahun_rilis">
+                        <input type="text" class="form-control" id="tahun_rilis" name="tahun_rilis" value="<?=$buku['tahun_rilis'];?>">
                 </div>
                 <div class="form-group">
                     <label for="jumlah_halaman">Jumlah Halaman</label>
-                        <input type="text" class="form-control" id="jumlah_halaman" name="jumlah_halaman">
+                        <input type="text" class="form-control" id="jumlah_halaman" name="jumlah_halaman" value="<?=$buku['jumlah_halaman'];?>">
                 </div>
                 <div class="form-group">
                     <label for="letak">Letak</label>
-                        <input type="text" class="form-control" id="letak" name="letak">
+                        <input type="text" class="form-control" id="letak" name="letak" value="<?=$buku['letak'];?>">
                 </div>
                 <div class="form-group">
                     <label for="deskripsi">Deskripsi</label>
-                        <input type="text" class="form-control" id="deskripsi" name="deskripsi">
-                </div>
-                <div class="form-group">
-                    <label for="cover">Upload Cover Buku</label>
-                    <input type="file" class="form-control" id="cover" name="cover">
-                    <p>Format .jpg, .png Max Size : 500KB</p>
+                        <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="<?=$buku['deskripsi'];?>">
                 </div>
                 <div class="form-group">
                     <label for="status">Status</label>
@@ -147,6 +124,11 @@
                         <?php endforeach;?>
                     </select>
                 </div>  
+                <div class="form-group">
+                    <label for="cover">Upload Cover Buku</label>
+                    <input type="file" class="form-control" id="cover" name="cover">
+                    <p>Format .jpg, .png Max Size : 500KB</p>
+                </div>
                 <div class="form-group">
                     <label for="file_buku">Upload Soft File Buku</label>
                     <input type="file" class="form-control" id="file_buku" name="file_buku">

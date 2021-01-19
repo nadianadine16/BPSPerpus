@@ -80,10 +80,6 @@ class User extends CI_Controller {
         $this->load->view('template/admin/footer',$data);
     }
 
-    public function dashboard_supervisor() {
-
-    }
-
     public function data_admin() {
         $data['title'] = 'Data Admin | Perpustakaan BPS Kota Malang';
         $data['admin'] = $this->User_model->getAllAdmin();
@@ -285,6 +281,17 @@ class User extends CI_Controller {
         $this->load->view("template/user/header",$data);
         $this->load->view("user/detail_buku",$data);
         $this->load->view("template/user/footer",$data);
+    }
+
+    public function dashboard_supervisor() {
+        $data['title'] = 'Dashboard Supervisor | Perpustakaan BPS Kota Malang';
+        $data['buku'] = $this->User_model->hitung_buku();
+        $data['pengunjung_datang'] = $this->User_model->hitung_pengunjung_datang();
+        $data['pengunjung_pulang'] = $this->User_model->hitung_pengunjung_pulang();
+
+        $this->load->view('template/admin/header',$data);
+        $this->load->view('supervisor/index',$data);
+        $this->load->view('template/admin/footer',$data);
     }
 }
 
