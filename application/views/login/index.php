@@ -20,7 +20,7 @@
           </div>
           <div class="login-wrapper my-auto">
             <h1 class="login-title" style="width:500px">Log in Admin / Supervisor Perpustakaan</h1>
-            <form action="<?=base_url('login/prosesLogin')?>" method="POST">
+            <form action="<?=base_url('user/prosesLogin')?>" method="POST">
               <div class="form-group">
                 <label for="username">Username</label>
                 <input type="username" name="uname1" id="username" class="form-control" placeholder="Masukan Username Anda">
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="col-sm-6 px-0 d-none d-sm-block">
-          <img src="<?= base_url()?>assetsLogin/images/kims.png" alt="login image" class="login-img">
+          <img src="<?= base_url()?>assetsLogin/images/perpus.jpg" alt="login image" class="login-img">
         </div>
       </div>
     </div>

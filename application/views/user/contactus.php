@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="col-lg-6 mt-4 mt-lg-0">
-        <form action="<?=base_url('user/prosesKritik')?>" method="POST">
+        <form action="<?=base_url('Kritik_saran/prosesKritik')?>" method="POST">
           <!-- <div class="form-row">
             <div class="col-md-6 form-group">
               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />

@@ -48,14 +48,13 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="<?= base_url();?>user/bukuTamu">Isi Buku Tamu</a></li>
-          <li><a href="<?= base_url();?>user/buku">Buku</a></li>
-          <li><a href="<?= base_url();?>user/contactus">Contact Us</a></li>
-          <li class="get-started"><a href="<?= base_url();?>login/index">LOGIN</a></li>
+          <li><a href="<?= base_url();?>user/dashboard_user">Home</a></li>
+          <li><a href="<?= base_url();?>pengunjung/bukuTamu">Isi Buku Tamu</a></li>
+          <li><a href="<?= base_url();?>buku/buku">Buku</a></li>
+          <li><a href="<?= base_url();?>kritik_saran/contactus">Contact Us</a></li>
+          <li class="get-started"><a href="<?= base_url();?>user/halaman_login">LOGIN</a></li>
         </ul>
       </nav><!-- .nav-menu -->
-
     </div>
   </header><!-- End Header -->
 
