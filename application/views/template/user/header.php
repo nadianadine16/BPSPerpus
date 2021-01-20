@@ -40,8 +40,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto" style="display:inline;">
-      <a href="index.html"><img src="<?= base_url()?>/assets/img/logo.png" alt="" ></a>
-        <h1 class="text-light" style="font-size:15px; margin-left : 100px;"><a href="index.html" class="site-logo">Badan Pusat Statistik<span></span></a></h1>
+        <a href="<?= base_url();?>User/index"><img src="<?php echo base_url('assets/admin/img/logo-bps.png')?>" width="55" height="40">&nbsp;&nbsp;<b>Perpustakaan BPS Kota Malang</b></a>
         <!-- Uncomment below if you prefer to use an image logo -->
         
       </div>
