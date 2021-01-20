@@ -54,7 +54,6 @@
           <li class="get-started"><a href="<?= base_url();?>User/login_user">LOGIN</a></li>
         </ul>
       </nav><!-- .nav-menu -->
-
     </div>
   </header><!-- End Header -->
 

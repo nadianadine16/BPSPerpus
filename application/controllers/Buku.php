@@ -160,6 +160,10 @@ class Buku extends CI_Controller {
         $this->load->view('template/admin/footer',$data);
     }
 
+    public function cari() {
+        
+    }
+
 }
 
 /* End of file Buku.php */
