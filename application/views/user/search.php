@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="col-md-5">
-        <form action ="<?= base_url('Buku/cari');?>" method="post">
+        <form action ="<?= base_url('user/cari');?>" method="post">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Search.." name="keyword" autocomplete="off">
             <div class="input-group-append">
@@ -31,12 +31,6 @@
         </div>
       </div>
       <?php endforeach;?>
-    </div>
-    <div class="row">
-        <div class="col">
-            <!--Tampilkan pagination-->
-            <?php echo $pagination; ?>
-        </div>
     </div>
   </div>
 </section><!-- End Team Section -->

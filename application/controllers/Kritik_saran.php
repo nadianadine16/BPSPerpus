@@ -25,7 +25,22 @@ class Kritik_saran extends CI_Controller {
         $this->Kritik_saran_model->hapus_kritik_saran($id);
         redirect('Kritik_saran/index','refresh');
     }
-
+    public function prosesKritik()
+    {
+        $data['title'] = 'Dashboard | kritik';
+     
+        $this->form_validation->set_rules('id_pengunjung', 'id_pengunjung', 'required');
+        $this->form_validation->set_rules('KritikSaran', 'KritikSaran', 'required');   
+        
+        // $cek_email = $this->user_model->cek_email($email);
+        if($this->form_validation->run() == FALSE) {
+            redirect('user/contactus','refresh');
+        }
+        else {
+            $this->Kritik_saran_model->tambah_kritik();
+            redirect('user/index','refresh');
+        }
+    }
 }
 
 /* End of file Kritik_saran.php */

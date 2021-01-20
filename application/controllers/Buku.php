@@ -161,6 +161,15 @@ class Buku extends CI_Controller {
     }
 
     public function cari() {
+        $data['title'] = 'Buku Search';
+        $data['dataBuku'] = $this->Buku_model->getAllBuku();
+        if($this->input->post('submit')){
+            $keyword=  $this->input->post('keyword');
+            $data['dataBuku'] = $this->Buku_model->search();
+        }
+        $this->load->view("template/user/header",$data);
+        $this->load->view("user/search",$data);
+        $this->load->view("template/user/footer",$data);
         
     }
 

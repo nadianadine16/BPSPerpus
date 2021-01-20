@@ -15,7 +15,14 @@ class Kritik_saran_model extends CI_Model {
     public function hapus_kritik_saran($id) {
         return $this->db->delete('kritik_saran',array("id_kritiksaran"=>$id));
     }
-
+    public function tambah_kritik(){
+        $this->id_kritiksaran=uniqid();
+        $data = [
+            "KritikSaran" => $this->input->post('KritikSaran', true),
+            "id_pengunjung" => $this->input->post('id_pengunjung', true)
+        ];
+        $this->db->insert('kritik_saran', $data);
+    }
 }
 
 /* End of file Kritik_saran_model.php */

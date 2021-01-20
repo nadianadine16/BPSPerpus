@@ -11,6 +11,10 @@ class Buku_model extends CI_Model {
         $query = $this->db->get();
         return $query->result_array();
     }
+    public function getBukuByPage($limit, $start) {
+        $query = $this->db->get('buku', $limit, $start);
+        return $query->result_array();
+    }
 
     public function tambah_data_buku() {
         $this->id_buku = uniqid();
@@ -95,6 +99,11 @@ class Buku_model extends CI_Model {
     public function getAllKategoriBuku() {
         $query = $this->db->get('kategori_buku');
         return $query->result_array();
+    }
+    public function search(){
+        $keyword=$this->input->post('keyword');
+        $this->db->like('judul_buku', $keyword);
+        return $this->db->get('buku')->result_array();
     }
 }
 
