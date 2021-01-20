@@ -35,44 +35,7 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo mr-auto" style="display:inline;">
-        <a href="<?= base_url();?>User/index"><img src="<?php echo base_url('assets/admin/img/logo-bps.png')?>" width="55" height="40">&nbsp;&nbsp;<b>Perpustakaan BPS Kota Malang</b></a>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="User/index">Home</a></li>
-          <li><a href="<?= base_url();?>User/bukuTamu">Isi Buku Tamu</a></li>
-          <li><a href="<?= base_url();?>User/buku">Buku</a></li>
-          <li><a href="<?= base_url();?>User/contactus">Contact Us</a></li>
-          <li class="get-started"><a href="<?= base_url();?>User/login_user">LOGIN</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
+  
 
   
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="<?= base_url()?>/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/php-email-form/validate.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="<?= base_url()?>/assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="<?= base_url()?>/assets/js/main.js"></script>
-
-</body>
-
-</html>
+  

@@ -117,8 +117,8 @@
         <?php $no=1; foreach($admin as $a):?>
           <tr>
           <td><?=$no++?></td>
+          <td><?=$a["nip"];?></td>
                   <td><?=$a["nama"];?></td>
-                  <td><?=$a["nip"];?></td>
                   <td><?=$a["jenis_kelamin"]?></td>
                   <td><?=$a["telepon"];?></td>
                   <td><?=$a["username"];?></td>

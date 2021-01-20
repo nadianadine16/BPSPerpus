@@ -252,22 +252,6 @@ class User extends CI_Controller {
         }
     }
 
-    // public function prosesKritik()
-    // {
-    //     $data['title'] = 'Dashboard | kritik';
-     
-    //     $this->form_validation->set_rules('id_pengunjung', 'id_pengunjung', 'required');
-    //     $this->form_validation->set_rules('KritikSaran', 'KritikSaran', 'required');   
-        
-    //     if($this->form_validation->run() == FALSE) {
-    //         redirect('user/kontakus','refresh');
-    //     }
-    //     else {
-    //         $this->User_model->tambah_kritik();
-    //         redirect('user/index','refresh');
-    //     }
-    // }
-
     public function buku() {
         $config['base_url'] = site_url('user/buku'); //site url
         $config['total_rows'] = $this->db->count_all('buku'); //total row

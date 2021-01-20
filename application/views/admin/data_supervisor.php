@@ -115,8 +115,8 @@
         <?php $no=1; foreach($supervisor as $s):?>
           <tr>
           <td><?=$no++?></td>
+          <td><?=$s["nip"];?></td>
                   <td><?=$s["nama"];?></td>
-                  <td><?=$s["nip"];?></td>
                   <td><?=$s["jenis_kelamin"]?></td>
                   <td><?=$s["telepon"];?></td>
                   <td><?=$s["username"];?></td>

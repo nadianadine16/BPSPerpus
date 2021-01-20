@@ -1,6 +1,29 @@
 <head>
 <title><?=$title?></title>
 </head>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto" style="display:inline;">
+        <a href="<?= base_url();?>User/index"><img src="<?php echo base_url('assets/admin/img/logo-bps.png')?>" width="55" height="40">&nbsp;&nbsp;<b>Perpustakaan BPS Kota Malang</b></a>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="<?= base_url();?>User/index">Home</a></li>
+          <li><a href="<?= base_url();?>User/bukuTamu">Isi Buku Tamu</a></li>
+          <li class="active"><a href="<?= base_url();?>User/buku">Buku</a></li>
+          <li><a href="<?= base_url();?>User/contactus">Contact Us</a></li>
+          <li class="get-started"><a href="<?= base_url();?>User/login_user">LOGIN</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
 <section id="team" class="team section-bg">
   <div class="container">
     <div class="section-title">
