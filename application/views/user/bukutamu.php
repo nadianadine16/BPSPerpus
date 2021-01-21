@@ -78,11 +78,11 @@
 				<span class="focus-input3"></span>
 				</div>
 				<div class="wrap-input3 validate-input" data-validate = "Alamat harus diisi">
-					<input class="input3" type="text" name="alamat" placeholder="Alamat Anda">
+					<input class="input3" type="text" name="alamat" placeholder="Alamat/Asal Instansi">
 					<span class="focus-input3"></span>
 				</div>
-                <div class="wrap-input3 validate-input" data-validate = "No Hp harus diisi">
-					<input class="input3" type="text" name="telepon" placeholder="Nomer Handphone Anda">
+                <div class="wrap-input3 validate-input" data-validate = "Telepon harus diisi">
+					<input class="input3" type="text" name="telepon" placeholder="Telepon Anda">
 					<span class="focus-input3"></span>
 				</div>
 				<div class="wrap-input3 validate-input" data-validate = "Isi email dengan forma: ex@gmail.com">

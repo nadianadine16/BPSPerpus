@@ -28,7 +28,7 @@
   <div class="container">
     <div class="section-title">
       <h2 data-aos="fade-in">Daftar Buku</h2>
-      <p data-aos="fade-in">Daftar Buku ini Tersedia Dalam Bentuk Softfile Ataupun Hardfile.</p>
+      <p data-aos="fade-in">Daftar Buku ini Tersedia Dalam Bentuk Soft File Ataupun Hard File.</p>
     </div>
     <div class="row">
       <div class="col-md-5">

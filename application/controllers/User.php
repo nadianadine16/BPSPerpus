@@ -255,7 +255,7 @@ class User extends CI_Controller {
     public function buku() {
         $config['base_url'] = site_url('user/buku'); //site url
         $config['total_rows'] = $this->db->count_all('buku'); //total row
-        $config['per_page'] = 5;  //show record per halaman
+        $config['per_page'] = 8;  //show record per halaman
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);

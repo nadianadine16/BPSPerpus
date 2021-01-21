@@ -9,8 +9,9 @@
       <div class="col-lg-6">
         <h3>Perpustakaan BPS Kota Malang</h3>       
       </div>
-    </div>
-
+    </div><br>
+    Jl. Janti Bar. No.47, Bandungrejosari, Kec. Sukun, Kota Malang, Jawa Timur 65148 2021<br>
+    &copy; Badan Pusat Statistik Kota Malang 2021
     <div class="social-links">
       <a href="https://www.facebook.com/bpskotamalang/" class="facebook"><i class="bx bxl-facebook"></i></a>
       <a href="https://www.instagram.com/bpskotamalang/" class="instagram"><i class="bx bxl-instagram"></i></a>
