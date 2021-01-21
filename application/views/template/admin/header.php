@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <link href="<?= base_url()?>/assets/img/logo.png" rel="icon">
+  <link href="<?= base_url()?>/assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url()?>/assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

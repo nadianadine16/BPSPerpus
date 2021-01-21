@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url()?>assetsLogin/css/login.css">
+  <link href="<?= base_url()?>/assets/img/logo.png" rel="icon">
+  <link href="<?= base_url()?>/assets/img/logo.png" rel="apple-touch-icon">
+
 </head>
 <body>
   <main>
