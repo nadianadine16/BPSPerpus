@@ -51,7 +51,7 @@ class Buku_model extends CI_Model {
     public function uploadFileBuku() {
         $config['upload_path'] = './upload/buku/';
         $config['allowed_types'] = 'pdf|docx';
-        $config['file_name'] = $this->id_buku;
+        // $config['file_name'] = $this->id_buku;
         $config['overwrite'] = true;
         // $config['max_size'] = 1024;
 
