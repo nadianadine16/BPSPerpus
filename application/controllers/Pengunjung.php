@@ -99,8 +99,8 @@ class Pengunjung extends CI_Controller {
 				)
             );
             
-            $filename = "Data Buku Tamu\"$tgl_awal - $tgl_akhir.xlsx";
-            $judul = "Buku Tamu $tgl_awal - $tgl_akhir";
+            $filename = "Data Pengunjung Perpustakaan \"$tgl_awal - $tgl_akhir.xlsx";
+            $judul = "Data Pengunjung $tgl_awal s/d $tgl_akhir Perpustakaan BPS Kota Malang";
             
             $excel->setActiveSheetIndex(0)->setCellValue('A1', $judul); 
 			$excel->getActiveSheet()->mergeCells('A1:J1'); 

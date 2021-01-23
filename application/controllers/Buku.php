@@ -130,7 +130,7 @@ class Buku extends CI_Controller {
         $this->form_validation->set_rules('isbn', 'ISBN', 'required');
         $this->form_validation->set_rules('nomor_katalog', 'Nomor Katalog', 'required');
         $this->form_validation->set_rules('tahun_rilis', 'Tahun', 'required');
-        $this->form_validation->set_rules('id_kategori', 'Katgeori Buku', 'required');
+        $this->form_validation->set_rules('id_kategori', 'Katgori Buku', 'required');
         $this->form_validation->set_rules('letak', 'letak', 'required');
         $this->form_validation->set_rules('jumlah_halaman', 'Jumlah Halaman', 'required');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
@@ -163,9 +163,13 @@ class Buku extends CI_Controller {
     public function cari() {
         $data['title'] = 'Buku Search';
         $data['dataBuku'] = $this->Buku_model->getAllBuku();
+        $data['kategori'] = $this->Buku_model->getAllKategoriBuku();
+        
         if($this->input->post('submit')){
-            $keyword=  $this->input->post('keyword');
-            $data['dataBuku'] = $this->Buku_model->search();
+            $keyword =  $this->input->post('keyword');
+            $kategori = $this->input->post('id_kategori');
+
+            $data['dataBuku'] = $this->Buku_model->search($keyword,$kategori);
         }
         $this->load->view("template/user/header",$data);
         $this->load->view("user/search",$data);

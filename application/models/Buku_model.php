@@ -100,9 +100,11 @@ class Buku_model extends CI_Model {
         $query = $this->db->get('kategori_buku');
         return $query->result_array();
     }
-    public function search(){
+    public function search($keyword,$keyword2){
         $keyword=$this->input->post('keyword');
+        $keyword2=$this->input->post('id_kategori');
         $this->db->like('judul_buku', $keyword);
+        $this->db->like('id_kategori', $keyword2);
         return $this->db->get('buku')->result_array();
     }
 }

@@ -51,7 +51,7 @@
 			<div class="wrap-contact3"style="background:#213B52; width:1000px">
 			<form action="<?=base_url('User/tambah_pengunjung')?>" method="POST" >
 				<span class="contact3-form-title">
-					Buku Tamu
+					- Buku Tamu -
 				</span>
 				<div class="alert alert-info" role="alert">
                   <?php
@@ -70,8 +70,9 @@
 				<div class="drop-down">
 				<div>
 					<select class="selection-2" id="jenis_kelamin" name="jenis_kelamin">
+					<option value="0">- Jenis Kelamin -</option>
 					<?php foreach($jenis_kelamin as $t) : ?>
-                        <option value="<?=($t)?>" selected><?=($t)?></option>
+                        <option value="<?=($t)?>"><?=($t)?></option>
                     <?php endforeach;?>
                 	</select>
 				</div>
@@ -92,7 +93,7 @@
 				<div class="drop-down">
 				<div>
 					<select class="selection-2" name="pekerjaan">
-					<option>Pilih Pekerjaan</option>
+					<option value="0">- Pilih Pekerjaan -</option>
 					<option>PNS</option>
 					<option>Karyawan BUMN/Swasta</option>
 					<option>Mahasiswa</option>
@@ -104,15 +105,16 @@
 				<div class="drop-down">
 					<div>
 					<select id="id_buku" name="id_buku" style="width:540px;">
+					<option value="0"> - Buku yang Dicari - </option>
 					<?php foreach($judulBuku as $d) : ?>
 						<option value="<?=$d["id_buku"];?>"><?=$d["judul_buku"];?></option>
 					<?php endforeach;?>
-					</select><br><br></div>
+					</select></div>
 					<span class="focus-input3"></span>
 				</div>
 				<input class="input3" type="hidden" name="status" value="1">
 				<div class="container-contact3-form-btn">
-					<button class="contact3-form-btn" name="submit">
+					<center><button class="contact3-form-btn" name="submit">
 					Submit
 					</button>
 				</div>

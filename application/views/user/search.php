@@ -32,9 +32,17 @@
     </div>
     <div class="row">
       <div class="col-md-5">
-        <form action ="<?= base_url('user/cari');?>" method="post">
+        <form action ="<?= base_url('Buku/cari');?>" method="post">
+
+        <select class="form-control" id="id_kategori" name="id_kategori">
+          <option value="">- Pilih Kategori Buku -</option>
+              <?php foreach($kategori as $kb) : ?>
+                  <option value="<?=$kb["id_kategori"];?>"><?=$kb["nama_kategori"];?></option>
+              <?php endforeach;?>
+        </select>
+
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search.." name="keyword" autocomplete="off">
+            <input type="text" class="form-control" placeholder="Masukkan Judul Buku . . ." name="keyword" autocomplete="off">
             <div class="input-group-append">
               <input class="btn btn-primary" type="submit" name="submit"></button>
             </div>

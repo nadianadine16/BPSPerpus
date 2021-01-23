@@ -81,6 +81,7 @@
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Alamat</th>
+            <th>Email</th>
             <th>Telepon</th>
             <th>Pekerjaan</th>
             <th>Tanggal</th>
@@ -96,6 +97,7 @@
             <td><?=$p["nama_pengunjung"];?></td>
             <td><?=$p["jenis_kelamin"];?></td>
             <td><?=$p["alamat"]?></td>
+            <td><?=$p["email"]?></td>
             <td><?=$p["telepon"];?></td>
             <td><?=$p["pekerjaan"];?></td>
             <td><?=$p["tanggal"];?></td>

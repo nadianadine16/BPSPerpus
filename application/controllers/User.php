@@ -284,6 +284,8 @@ class User extends CI_Controller {
         $data['title'] = 'Buku';
         $data['dataBuku'] = $this->Buku_model->getBukuByPage($config["per_page"], $data['page']);
         $data['pagination'] = $this->pagination->create_links();
+        $data['kategori'] = $this->Buku_model->getAllKategoriBuku();
+        
         $this->load->view("template/user/header",$data);
         $this->load->view("user/buku",$data);
         $this->load->view("template/user/footer",$data);
