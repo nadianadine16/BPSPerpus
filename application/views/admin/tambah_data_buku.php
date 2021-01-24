@@ -139,15 +139,23 @@
                     <input type="file" class="form-control" id="cover" name="cover">
                     <p>Format .jpg, .png Max Size : 500KB</p>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="status">Status</label>
                     <select class="form-control" id="status" name="status">
                         <?php foreach($status as $s) : ?>
                             <option value="<?=($s)?>" selected><?=($s)?></option>
                         <?php endforeach;?>
                     </select>
-                </div>  
+                </div>   -->
+
                 <div class="form-group">
+                    <label for="status">Status</label><br>
+                    <?php foreach($status as $s) : ?>
+                      <input type="radio" class="form-control1" id="status" name="status" value="<?=($s)?>"><?=($s)?>
+                    <?php endforeach;?>
+                </div>  
+
+                <div id="formz">
                     <label for="file_buku">Upload Soft File Buku</label>
                     <input type="file" class="form-control" id="file_buku" name="file_buku">
                     <p>Format .pdf</p>
@@ -157,3 +165,17 @@
         </div>
     </div>
 </div>      
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#formz").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
+  $(".form-control1").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+    if ($("input[name='status']:checked").val() == "Tersedia Softcopy" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
+      $("#formz").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
+      } 
+    else {
+      $("#formz").slideUp("fast"); //Efek Slide Up (Menghilangkan Form Input)
+    }
+  });
+});
+</script>
